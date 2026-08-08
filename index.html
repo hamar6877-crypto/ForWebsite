@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ckb" dir="rtl" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بانگهێشتنامەی هاوسەرگیری - ئاریان & ڕۆژان</title>
+
+    <!-- Meta Description & Favicon -->
+    <meta name="description" content="بانگهێشتنامەی هاوسەرگیری ئاریان & ڕۆژان - دیزاینێکی تایبەت و مۆدێرن بۆ پیرۆزبایی هاوسەرگیری." />
+    <meta name="theme-color" content="#0a090c" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Noto+Sans+Arabic:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&family=Vazirmatn:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+
+    <!-- 0. INTERACTIVE LUXURY ENVELOPE MOTION CARD COVER -->
+    <div id="envelope-overlay" class="envelope-overlay">
+      <!-- Left Folding Door -->
+      <div id="door-left" class="envelope-door door-left">
+        <div class="door-inner">
+          <div class="door-border-pattern"></div>
+          <div class="door-gold-line"></div>
+        </div>
+      </div>
+
+      <!-- Right Folding Door -->
+      <div id="door-right" class="envelope-door door-right">
+        <div class="door-inner">
+          <div class="door-border-pattern"></div>
+          <div class="door-gold-line"></div>
+        </div>
+      </div>
+
+      <!-- Center Motion Wax Seal & Interactive Button -->
+      <div id="envelope-seal-wrapper" class="envelope-seal-wrapper">
+        <div class="seal-badge-title" id="envelope-badge">بانگهێشتنامەی فەرمی هاوسەرگیری</div>
+        
+        <button id="open-envelope-btn" class="envelope-seal-btn" aria-label="Open Wedding Invitation">
+          <div class="seal-ring-pulse"></div>
+          <div class="seal-content-inner">
+            <svg class="seal-heart-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span id="seal-text-btn" class="seal-btn-text">بیکەرەوە</span>
+          </div>
+        </button>
+
+        <div class="seal-names-sub">
+          <span id="envelope-groom">ئاریان</span> <span class="heart-pulse text-red-500 animate-pulse" aria-hidden="true">❤️</span> <span id="envelope-bride">ڕۆژان</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. HEADER & STICKY NAVIGATION -->
+    <header id="site-header" class="site-header">
+      <div class="container header-inner">
+        <!-- Groom ❤️ Bride Title -->
+        <a href="#hero" class="couple-brand" id="header-brand" aria-label="Groom and Bride Home Link">
+          <span id="header-groom-name">ئاریان</span>
+          <span class="heart-pulse" aria-hidden="true">❤️</span>
+          <span id="header-bride-name">ڕۆژان</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#hero" class="nav-link active" id="nav-home">سەرەتا</a></li>
+            <li><a href="#story" class="nav-link" id="nav-story">چیرۆکەکەمان</a></li>
+            <li><a href="#details" class="nav-link" id="nav-details">وردەکارییەکان</a></li>
+            <li><a href="#location" class="nav-link" id="nav-location">شوێن</a></li>
+          </ul>
+        </nav>
+
+        <!-- Controls: Language Switcher & Theme Toggle -->
+        <div class="header-controls">
+          <!-- Envelope Card Re-open Toggle -->
+          <button id="reopen-card-btn" class="reopen-card-btn" aria-label="Toggle Envelope Cover" title="داپۆشینەوەی کارت">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </button>
+
+          <!-- Language Switcher Dropdown -->
+          <div class="lang-switcher">
+            <button id="lang-btn" class="lang-btn" aria-label="Select Language">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>
+              </svg>
+              <span id="lang-label">کوردی (سۆرانی)</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div id="lang-dropdown" class="lang-dropdown" role="menu">
+              <button class="lang-option active" data-lang="ckb" role="menuitem">کوردی (سۆرانی)</button>
+              <button class="lang-option" data-lang="ar" role="menuitem">العربية</button>
+              <button class="lang-option" data-lang="en" role="menuitem">English</button>
+            </div>
+          </div>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Mobile Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE OVERLAY NAVIGATION -->
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link" id="mobile-nav-home">سەرەتا</a></li>
+        <li><a href="#story" class="mobile-nav-link" id="mobile-nav-story">چیرۆکەکەمان</a></li>
+        <li><a href="#details" class="mobile-nav-link" id="mobile-nav-details">وردەکارییەکان</a></li>
+        <li><a href="#location" class="mobile-nav-link" id="mobile-nav-location">شوێن</a></li>
+      </ul>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <!-- Badge -->
+        <div class="hero-badge reveal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.28 1.28L3 12l5.8 1.9a2 2 0 0 1 1.28 1.28L12 21l1.9-5.8a2 2 0 0 1 1.28-1.28L21 12l-5.8-1.9a2 2 0 0 1-1.28-1.28Z"/></svg>
+          <span>بانگهێشتنامەی هاوسەرگیری</span>
+        </div>
+
+        <!-- Groom ❤️ Bride Title -->
+        <h1 class="hero-title reveal">
+          <span id="hero-groom-name">ئاریان</span>
+          <span class="heart-pulse">❤️</span>
+          <span id="hero-bride-name">ڕۆژان</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p id="hero-subtitle" class="hero-subtitle reveal">
+          ئامادەبوونت ڕۆژە گەشاوەکەمان خۆشتر و جوانتر دەکات.
+        </p>
+
+        <!-- COUNTDOWN TIMER -->
+        <div class="countdown-wrapper reveal">
+          <p id="countdown-title" class="section-tag" style="margin-bottom: 1rem;">ئاهەنگەکەمان دەستپێدەکات دوای</p>
+          <div class="countdown-container">
+            <div class="countdown-card">
+              <span id="days-count" class="countdown-number">00</span>
+              <span id="lbl-days" class="countdown-label">ڕۆژ</span>
+            </div>
+            <div class="countdown-card">
+              <span id="hours-count" class="countdown-number">00</span>
+              <span id="lbl-hours" class="countdown-label">کاتژمێر</span>
+            </div>
+            <div class="countdown-card">
+              <span id="minutes-count" class="countdown-number">00</span>
+              <span id="lbl-minutes" class="countdown-label">خولەک</span>
+            </div>
+            <div class="countdown-card">
+              <span id="seconds-count" class="countdown-number">00</span>
+              <span id="lbl-seconds" class="countdown-label">چرکە</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. OUR STORY SECTION -->
+    <section id="story" class="section-padding">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="story-title" class="section-title">چیرۆکی خۆشەویستیمان</h2>
+        </div>
+
+        <!-- Story Grid populated dynamically from config -->
+        <div id="story-grid-container" class="story-grid"></div>
+      </div>
+    </section>
+
+    <!-- 4. WEDDING DETAILS SECTION -->
+    <section id="details" class="section-padding" style="background: var(--bg-card);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span id="details-tag" class="section-tag">زانیاری پێویست</span>
+          <h2 id="details-title" class="section-title">وردەکارییەکانی ئاهەنگ</h2>
+        </div>
+
+        <div class="details-grid">
+          <!-- Date Card -->
+          <div class="detail-card reveal-left">
+            <div class="detail-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            </div>
+            <div class="detail-body">
+              <div id="lbl-card-date" class="detail-title">بەرواری ئاهەنگ</div>
+              <div id="val-card-date" class="detail-value">شەممە، ١/٨/٢٠٢٦</div>
+            </div>
+          </div>
+
+          <!-- Time Card -->
+          <div class="detail-card reveal-zoom">
+            <div class="detail-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="detail-body">
+              <div id="lbl-card-time" class="detail-title">کاتی ئاهەنگ</div>
+              <div id="val-card-time" class="detail-value">٦:٠٠ی ئێوارە</div>
+            </div>
+          </div>
+
+          <!-- Venue Card -->
+          <div class="detail-card reveal-right">
+            <div class="detail-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            </div>
+            <div class="detail-body">
+              <div id="lbl-card-venue" class="detail-title">شوێنی ئاهەنگ</div>
+              <div id="val-card-venue" class="detail-value">هۆڵی ئیڤێنتس پەمەیی چاڤی لاند</div>
+            </div>
+          </div>
+
+          <!-- Parking Card -->
+          <div class="detail-card reveal-left">
+            <div class="detail-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+            </div>
+            <div class="detail-body">
+              <div id="lbl-card-parking" class="detail-title">پارکینگ</div>
+              <div id="val-card-parking" class="detail-value">پارکینگی بەخۆڕایی و تایبەت بۆ تەواوی میوانان</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. LOCATION SECTION -->
+    <section id="location" class="section-padding">
+      <div class="container">
+        <div class="section-header reveal">
+          <span id="location-tag" class="section-tag">چۆن دەگەیت بە ئێمە</span>
+          <h2 id="location-title" class="section-title">شوێن و ناونیشان</h2>
+        </div>
+
+        <div class="location-wrapper reveal-zoom">
+          <div class="location-info">
+            <h3 id="venue-name-text" class="venue-name">هۆڵی ئیڤێنتس پەمەیی چاڤی لاند</h3>
+            <p id="venue-address-text" class="venue-address">شاری گەشتیاری چاڤی لاند، سلێمانی، عێراق</p>
+
+            <div>
+              <a id="btn-open-maps" href="https://maps.google.com/?q=Chavi+Land+Sulaymaniyah" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg>
+                <span id="btn-open-maps-text">کردنەوە لە گۆگڵ ماپ</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13045.228514949511!2d45.4414999!3d35.5861499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40002c91b5ff9525%3A0xb35a4d531c36ef20!2sChavi%20Land!5e0!3m2!1sen!2siq!4v1700000000000!5m2!1sen!2siq" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Venue Location Map">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FOOTER & ZNJINODE ADVERTISEMENT SECTION -->
+    <footer class="site-footer">
+      <div class="container">
+        <!-- ZNJINODE PREMIER ADVERTISING BANNER -->
+        <div class="ad-banner reveal-zoom">
+          <h3 id="ad-title" class="ad-title">دەتەوێت بانگهێشتنامەیەکی تایبەتت هەبێت؟</h3>
+          <p id="ad-text" class="ad-text">
+            ئەگەر دەتەوێت بانگهێشتنامەی هاوسەرگیری تایبەت و مۆدێرن هەبێت، ZnjiNode ئامادەیە بۆ دروستکردنی دیزاینێکی تایبەت بۆ تۆ.
+          </p>
+          <div class="ad-ctas">
+            <a id="ad-whatsapp-btn" href="https://wa.me/9647514141479" target="_blank" rel="noopener noreferrer" class="btn-primary whatsapp-btn">
+              <svg class="whatsapp-logo-svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                <rect width="24" height="24" rx="6.5" fill="#25D366"/>
+                <path fill="#FFFFFF" d="M12 4.15a7.85 7.85 0 0 0-6.73 11.89L4.2 19.8l3.92-1.03A7.85 7.85 0 1 0 12 4.15zm4.56 11.12c-.19.54-1.12 1.05-1.57 1.1-.43.05-.98.08-2.92-.68-2.48-.98-4.05-3.51-4.18-3.68-.12-.17-1.01-1.34-1.01-2.56 0-1.22.64-1.82.87-2.06.23-.24.5-.3.67-.3.17 0 .34 0 .49.01.15.01.36-.06.56.42.21.49.71 1.73.77 1.86.06.13.1.28.02.45-.09.17-.13.27-.26.42-.13.15-.27.34-.39.46-.13.13-.27.27-.12.54.15.27.68 1.13 1.47 1.83 1.01.9 1.86 1.18 2.13 1.31.27.13.42.11.58-.07.15-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.24.09 1.54.73 1.8 1 .27.27.27.45.2.63z"/>
+              </svg>
+              <span id="ad-whatsapp-text">چات لە واتسئاپ</span>
+            </a>
+            <a id="ad-instagram-btn" href="https://www.instagram.com/zinjinode?igsh=ejYwOTg0aGd1eW1z" target="_blank" rel="noopener noreferrer" class="btn-secondary instagram-btn">
+              <svg class="instagram-logo-svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                <defs>
+                  <radialGradient id="ig-logo-grad" cx="20%" cy="90%" r="125%">
+                    <stop offset="0%" stop-color="#fdf497" />
+                    <stop offset="10%" stop-color="#fdf497" />
+                    <stop offset="45%" stop-color="#fd5949" />
+                    <stop offset="60%" stop-color="#d6249f" />
+                    <stop offset="90%" stop-color="#285AEB" />
+                  </radialGradient>
+                </defs>
+                <rect width="24" height="24" rx="6.5" fill="url(#ig-logo-grad)"/>
+                <rect x="4.8" y="4.8" width="14.4" height="14.4" rx="4" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="3.3" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+                <circle cx="15.8" cy="8.2" r="0.95" fill="#ffffff"/>
+              </svg>
+              <span id="ad-instagram-text">ئینستاگرام ZnjiNode</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-top">
+          <div class="footer-logo">ZnjiNode</div>
+        </div>
+
+        <div class="footer-bottom">
+          <p id="footer-text" class="footer-love-text">بە خۆشەویستییەوە دروستکراوە بۆ ئاریان و ڕۆژان لەلایەن ZnjiNode</p>
+          <p class="footer-rights-text" dir="ltr">&copy; 2026. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Configuration & Application Scripts -->
+    <script src="/src/config.js"></script>
+    <script src="/src/script.js"></script>
+  </body>
+</html>

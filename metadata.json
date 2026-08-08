@@ -1,0 +1,6 @@
+{
+  "name": "Luxury Wedding Invitation",
+  "description": "An elegant, cinematic luxury wedding invitation website with Kurdish Sorani, Arabic, and English support, theme toggle, interactive story timeline, countdown, and event details.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
